@@ -1,0 +1,15 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex: 1;
+    
+    &:hover {
+        background-color: var(--mantine-color-green-0);
+    }
+
+    &:active {
+        background-color: var(--mantine-color-green-0);
+    }
+}

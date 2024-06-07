@@ -10,15 +10,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mantine/core": "^7.4.1",
-    "@mantine/form": "^7.4.1",
-    "@mantine/hooks": "^7.4.1",
+    "@mantine/core": "^7.10.1",
+    "@mantine/form": "^7.10.1",
+    "@mantine/hooks": "^7.10.1",
+    "@supabase/supabase-js": "^2.43.4",
     "@tabler/icons-react": "^2.45.0",
+    "@tanstack/react-query": "^5.40.1",
     "dayjs": "^1.11.10",
+    "formik": "^2.4.6",
+    "mantine-form-yup-resolver": "^2.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^5.35.6",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
