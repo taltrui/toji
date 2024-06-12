@@ -1,19 +1,34 @@
 import { Button, Image, Stack, Text, Title } from "@mantine/core";
 
+import Rings from "../../../../assets/rings.svg";
+import { IconMap2 } from "@tabler/icons-react";
+
 const Place = () => {
   return (
-    <Stack align="center">
+    <Stack align="center" mb={24}>
       <Image
-        src="https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b"
+        src={Rings}
         alt="Quinta La Paz"
+        style={{
+          width: "25%",
+        }}
       />
-      <Title order={2}>Ceremonia</Title>
-      <Text>
-        Te esperamos en <b>Gorostiaga 760, Fatima, Buenos Aires</b> para
-        festejar juntos nuestra ceremonia ¡Por favor, se puntual!
+      <Title order={1}>Ceremonia</Title>
+      <Text
+        style={{
+          textAlign: "center",
+          marginBottom: 12,
+        }}
+      >
+        Te esperamos en <br />
+        <b>Gorostiaga 760, Fatima, Buenos Aires</b>
+        <br /> para festejar juntos nuestra ceremonia <br /> ¡Por favor, se
+        puntual!
       </Text>
       <a href="https://maps.app.goo.gl/QHn4DHRVouxJkZgZA" target="_blank">
-        <Button variant="light">Como llegar</Button>
+        <Button leftSection={<IconMap2 />} variant="light" size="lg">
+          Como llegar
+        </Button>
       </a>
     </Stack>
   );

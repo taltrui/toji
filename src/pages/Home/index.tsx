@@ -1,3 +1,4 @@
+import { Stack } from "@mantine/core";
 import useParams from "../../utils/useParams";
 import Confirmation from "./modules/Confirmation";
 import Contact from "./modules/Contact";
@@ -11,7 +12,7 @@ const Home = () => {
   const params = useParams(["inv"] as const);
 
   return (
-    <>
+    <Stack>
       <Header />
       <Place />
       <DressCode />
@@ -19,7 +20,7 @@ const Home = () => {
       <Gifts />
       {params.inv && <Confirmation invitationId={params.inv} />}
       <Contact />
-    </>
+    </Stack>
   );
 };
 

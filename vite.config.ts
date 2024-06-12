@@ -6,6 +6,9 @@ export default defineConfig({
   root: ".",
   plugins: [react()],
   css: {
+    modules: {
+      localsConvention: "camelCaseOnly",
+    },
     preprocessorOptions: {
       scss: {
         additionalData: `@import "./src/_mantine";`,

@@ -1,4 +1,4 @@
-import { Button, Drawer, Group, Text, Title } from "@mantine/core";
+import { Button, Drawer, Group, Text } from "@mantine/core";
 import useCreateInvitees from "../../../../../services/mutations/useCreateInvitees";
 import { Invitation } from "../../../../../services/queries/useInvitation/useInvitation.interface";
 import useInvitees from "../../../../../services/queries/useInvitees";
@@ -61,10 +61,10 @@ const ConfirmationDrawer = ({
             de Octubre.
           </Text>
           <Group justify="space-between">
-            <Button onClick={onClose} size="lg">
+            <Button onClick={onClose} size="md">
               Cancelar
             </Button>
-            <Button type="submit" size="lg">
+            <Button type="submit" size="md">
               Confirmar
             </Button>
           </Group>

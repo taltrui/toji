@@ -1,14 +1,23 @@
-import { Image, Stack, Text } from "@mantine/core";
+import { Image, Stack, Text, Title } from "@mantine/core";
+
+import DressCodeImage from "../../../../assets/dresscode.svg";
 
 const DressCode = () => {
   return (
-    <Stack>
+    <Stack align="center" gap={0}>
       <Image
-        src="https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b"
+        src={DressCodeImage}
         alt="Quinta La Paz"
+        style={{
+          width: "25%",
+          marginBottom: 24,
+        }}
       />
-      <Text>Elegante</Text>
-      <Text>Tip: no uses tacos finos</Text>
+      <Title order={1} mb={6}>
+        Dress Code
+      </Title>
+      <Text size="lg">Elegante</Text>
+      <Text size="sm">Tip: no uses tacos finos</Text>
     </Stack>
   );
 };

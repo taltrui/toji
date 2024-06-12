@@ -1,14 +1,24 @@
-import { Button, Stack, Text } from "@mantine/core";
+import { Button, Stack, Text, Title } from "@mantine/core";
 
 const Gifts = () => {
   return (
-    <Stack align="center">
-      <Text>Regalos</Text>
-      <Text>
-        ¡Tu presencia es nuestro mejor regalo! de igual forma, te pasamos
+    <Stack
+      align="center"
+      style={{
+        marginTop: 24,
+      }}
+    >
+      <Title>Regalos</Title>
+      <Text
+        style={{
+          textAlign: "center",
+          marginBottom: 12,
+        }}
+      >
+        ¡Tu presencia es nuestro mejor regalo! <br /> de igual forma, te pasamos
         nuestros datos por si queres dejarnos un detalle
       </Text>
-      <Button>Ver datos</Button>
+      <Button size="md">Ver datos</Button>
     </Stack>
   );
 };

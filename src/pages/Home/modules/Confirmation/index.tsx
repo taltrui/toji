@@ -1,11 +1,12 @@
-import { Button, Stack, Text } from "@mantine/core";
+import { Button, Stack, Text, Title } from "@mantine/core";
 import useInvitation from "../../../../services/queries/useInvitation";
 import { useState } from "react";
 import ConfirmationDrawer from "./ConfirmationDrawer";
+import { IconAddressBook } from "@tabler/icons-react";
 
 const Confirmation = ({ invitationId }: { invitationId: string }) => {
   const [opened, setOpened] = useState(false);
-  const { data } = useInvitation(invitationId);
+  const { data, isLoading } = useInvitation(invitationId);
 
   const openDrawer = () => {
     setOpened(true);
@@ -46,13 +47,25 @@ const Confirmation = ({ invitationId }: { invitationId: string }) => {
 
   return (
     <>
-      <Stack align="center">
-        <Text>¡Te esperamos!</Text>
-        <Text>
-          {`Esta invitación vale para ${createInviteesText()}. Por favor, confirma
-        asistencia`}
-        </Text>
-        <Button onClick={openDrawer}>Confirmar asistencia</Button>
+      <Stack align="center" mt={24}>
+        <Title>¡Te esperamos!</Title>
+        {!isLoading && (
+          <Text
+            style={{
+              textAlign: "center",
+            }}
+          >
+            {`Esta invitación vale para ${createInviteesText()}.`}
+            <br /> Por favor, confirma asistencia
+          </Text>
+        )}
+        <Button
+          leftSection={<IconAddressBook />}
+          size="md"
+          onClick={openDrawer}
+        >
+          Confirmar asistencia
+        </Button>
       </Stack>
       <ConfirmationDrawer
         opened={opened}
