@@ -1,4 +1,4 @@
-import { Button, MantineColorsTuple, Title, createTheme } from "@mantine/core";
+import { Button, MantineColorsTuple, createTheme } from "@mantine/core";
 
 import buttonClasses from "./Button.module.scss";
 

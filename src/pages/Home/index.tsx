@@ -12,14 +12,20 @@ const Home = () => {
   const params = useParams(["inv"] as const);
 
   return (
-    <Stack>
-      <Header />
-      <Place />
-      <DressCode />
-      <Stay />
-      <Gifts />
-      {params.inv && <Confirmation invitationId={params.inv} />}
-      <Contact />
+    <Stack align="center">
+      <Stack
+        style={{
+          maxWidth: 600,
+        }}
+      >
+        <Header />
+        <Place />
+        <DressCode />
+        <Stay />
+        <Gifts />
+        {params.inv && <Confirmation invitationId={params.inv} />}
+        <Contact />
+      </Stack>
     </Stack>
   );
 };
