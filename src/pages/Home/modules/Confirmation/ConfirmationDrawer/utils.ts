@@ -16,7 +16,6 @@ export const getInitialValues = (
   const minors = invitees.filter((invitee) => invitee.minor);
 
   adults.forEach((invitee) => {
-    console.log(invitee)
     initialValues.adults.push({
       id: invitee.id,
       name: invitee.name,
@@ -62,6 +61,5 @@ export const getInitialValues = (
     });
   }
 
-  console.log({ ad: invitation.adults, len: initialValues.adults });
   return initialValues;
 };
