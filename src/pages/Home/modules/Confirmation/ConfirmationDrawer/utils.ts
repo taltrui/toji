@@ -16,6 +16,7 @@ export const getInitialValues = (
   const minors = invitees.filter((invitee) => invitee.minor);
 
   adults.forEach((invitee) => {
+    console.log(invitee)
     initialValues.adults.push({
       id: invitee.id,
       name: invitee.name,
@@ -39,7 +40,7 @@ export const getInitialValues = (
     });
   });
 
-  for (let i = 0; i < invitation.adults - initialValues.adults.length; i++) {
+  for (let i = 0; i < invitation.adults - adults.length; i++) {
     initialValues.adults.push({
       name: "",
       surname: "",
@@ -50,7 +51,7 @@ export const getInitialValues = (
     });
   }
 
-  for (let i = 0; i < invitation.minors - initialValues.minors.length; i++) {
+  for (let i = 0; i < invitation.minors - minors.length; i++) {
     initialValues.minors.push({
       name: "",
       surname: "",
@@ -61,6 +62,6 @@ export const getInitialValues = (
     });
   }
 
-  console.log(initialValues);
+  console.log({ ad: invitation.adults, len: initialValues.adults });
   return initialValues;
 };

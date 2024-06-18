@@ -1,4 +1,4 @@
-import { Button, Drawer, Group, Text } from "@mantine/core";
+import { Button, Drawer, Group, Stack, Text } from "@mantine/core";
 import useCreateInvitees from "../../../../../services/mutations/useCreateInvitees";
 import { Invitation } from "../../../../../services/queries/useInvitation/useInvitation.interface";
 import useInvitees from "../../../../../services/queries/useInvitees";
@@ -8,6 +8,7 @@ import { Form, Formik } from "formik";
 import { validationSchema } from "./ConfirmationDrawer.formik";
 import useUpdateInvitees from "../../../../../services/mutations/useUpdateInvitees";
 import { getInitialValues } from "./utils";
+import styles from "./styles.module.scss";
 
 const ConfirmationDrawer = ({
   opened,
@@ -48,26 +49,28 @@ const ConfirmationDrawer = ({
         onSubmit={onSubmit}
         validationSchema={validationSchema}
       >
-        <Form>
-          {Array.from({ length: invitation?.adults || 0 }).map((_, index) => (
-            <FieldGroup index={index} type="adults" key={`adult-${index}`} />
-          ))}
-          {Array.from({ length: invitation?.minors || 0 }).map((_, index) => (
-            <FieldGroup index={index} type="minors" key={`minor-${index}`} />
-          ))}
+        <Form className={styles.formContainer}>
+          <Stack className={styles.form}>
+            {Array.from({ length: invitation?.adults || 0 }).map((_, index) => (
+              <FieldGroup index={index} type="adults" key={`adult-${index}`} />
+            ))}
+            {Array.from({ length: invitation?.minors || 0 }).map((_, index) => (
+              <FieldGroup index={index} type="minors" key={`minor-${index}`} />
+            ))}
 
-          <Text size="sm" mb={16} fs="italic" c="dimmed">
-            Vas a poder actualizar la información de los invitados hasta el 20
-            de Octubre.
-          </Text>
-          <Group justify="space-between">
-            <Button onClick={onClose} size="md">
-              Cancelar
-            </Button>
-            <Button type="submit" size="md">
-              Confirmar
-            </Button>
-          </Group>
+            <Text size="sm" mb={16} fs="italic" c="dimmed">
+              Vas a poder actualizar la información de los invitados hasta el 20
+              de Octubre.
+            </Text>
+            <Group justify="space-between">
+              <Button onClick={onClose} size="md">
+                Cancelar
+              </Button>
+              <Button type="submit" size="md">
+                Confirmar
+              </Button>
+            </Group>
+          </Stack>
         </Form>
       </Formik>
     </Drawer>
