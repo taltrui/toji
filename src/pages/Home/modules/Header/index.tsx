@@ -17,7 +17,7 @@ const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TE
 
 const Header = () => {
   return (
-    <Stack align="center" mb={100}>
+    <Stack align="center" mb={150}>
       <Box
         style={{
           position: "relative",
@@ -28,10 +28,10 @@ const Header = () => {
         <Box
           style={{
             position: "absolute",
-            bottom: 0,
+            bottom: -2,
             left: 0,
             width: "100%",
-            height: "50%",
+            height: "52%",
             background:
               "linear-gradient(180deg, rgba(221,223,217,0) 0%, rgba(102,110,82,0.631897742006959) 60%, rgba(255,255,255,1) 100%)",
           }}
@@ -70,7 +70,7 @@ const Header = () => {
           style={{
             position: "absolute",
             left: "50%",
-            bottom: -70,
+            bottom: -120,
             transform: "translate(-50%, 0)",
             alignItems: "center",
           }}

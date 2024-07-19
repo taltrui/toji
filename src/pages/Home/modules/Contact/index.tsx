@@ -8,7 +8,9 @@ const Contact = () => {
       style={{
         backgroundColor: "rgba(7,91,0,0.16)",
         padding: 32,
-        marginTop: 24
+        marginTop: 24,
+        borderTopLeftRadius: 4,
+        borderTopRightRadius: 4,
       }}
     >
       <Text

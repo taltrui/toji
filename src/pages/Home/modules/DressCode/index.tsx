@@ -17,7 +17,7 @@ const DressCode = () => {
         Dress Code
       </Title>
       <Text size="lg">Elegante</Text>
-      <Text size="sm">Tip: no uses tacos finos</Text>
+      <Text size="sm">Tip: no uses tacos aguja</Text>
     </Stack>
   );
 };

@@ -10,7 +10,8 @@ const Stay = () => {
       style={{
         paddingRight: 18,
         paddingLeft: 18,
-        paddingBottom: 42,
+        paddingBottom: 28,
+        borderRadius: 4,
         paddingTop: 72,
         background:
           "linear-gradient(0deg, rgba(7,91,0,0.7) 0%, rgba(15,193,0,0.35) 50%, rgba(15,193,0,0) 100%)",
@@ -27,16 +28,15 @@ const Stay = () => {
 
       <UnstyledButton
         component="a"
-        href="https://www.hiltonpilar.ar/"
+        href="https://www.hotelgreen.com.ar/"
         target="_blank"
         w={"100%"}
       >
         <Card shadow="xs" padding="lg" radius="md" className={styles.card}>
           <Stack gap={0}>
             <Text size="xl">
-              <b>Hilton en Pilar</b>
+              <b>Green</b>
             </Text>
-            <Text c="dimmed">Ingresa para tener más información.</Text>
             <Text c="dimmed" size="sm">
               Familiar
             </Text>
@@ -44,7 +44,24 @@ const Stay = () => {
           <IconChevronRight />
         </Card>
       </UnstyledButton>
-
+      <UnstyledButton
+        component="a"
+        href="https://www.hiltonpilar.ar/"
+        target="_blank"
+        w={"100%"}
+      >
+        <Card shadow="xs" padding="lg" radius="md" className={styles.card}>
+          <Stack gap={0}>
+            <Text size="xl">
+              <b>Hilton Pilar</b>
+            </Text>
+            <Text c="dimmed" size="sm">
+              Familiar
+            </Text>
+          </Stack>
+          <IconChevronRight />
+        </Card>
+      </UnstyledButton>
       <UnstyledButton
         component="a"
         href="https://lapostadelpilar.com/portal/es-es/2152/Home"
@@ -56,7 +73,24 @@ const Stay = () => {
             <Text size="xl">
               <b>La Posta del Pilar</b>
             </Text>
-            <Text c="dimmed">Ingresa para tener más información.</Text>
+            <Text c="dimmed" size="sm">
+              Solo adultos
+            </Text>
+          </Stack>
+          <IconChevronRight />
+        </Card>
+      </UnstyledButton>
+      <UnstyledButton
+        component="a"
+        href="https://www.hotelcamberland.com/"
+        target="_blank"
+        w={"100%"}
+      >
+        <Card shadow="xs" padding="lg" radius="md" className={styles.card}>
+          <Stack gap={0}>
+            <Text size="xl">
+              <b>Camberland</b>
+            </Text>
             <Text c="dimmed" size="sm">
               Solo adultos
             </Text>
