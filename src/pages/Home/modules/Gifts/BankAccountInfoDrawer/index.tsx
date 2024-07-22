@@ -1,5 +1,4 @@
 import { Modal, Stack, Text } from "@mantine/core";
-import styles from "./styles.module.scss";
 
 const BankAccountInfoDrawer = ({
   opened,
