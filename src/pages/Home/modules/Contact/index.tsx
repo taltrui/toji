@@ -1,6 +1,8 @@
 import { ActionIcon, Group, Stack, Text } from "@mantine/core";
 import { IconBrandWhatsapp } from "@tabler/icons-react";
 
+import styles from "./styles.module.scss";
+
 const Contact = () => {
   return (
     <Stack
@@ -27,14 +29,8 @@ const Contact = () => {
           <ActionIcon
             component="a"
             href="https://wa.me/5491136712562"
+            className={styles.actionIcon}
             target="_blank"
-            style={{
-              marginTop: 12,
-              backgroundColor: "white",
-              height: 48,
-              width: 48,
-              borderRadius: 24,
-            }}
           >
             <IconBrandWhatsapp color="#007039" />
           </ActionIcon>
@@ -45,13 +41,7 @@ const Contact = () => {
             component="a"
             href="https://wa.me/5491159885395"
             target="_blank"
-            style={{
-              marginTop: 12,
-              backgroundColor: "white",
-              height: 48,
-              width: 48,
-              borderRadius: 24,
-            }}
+            className={styles.actionIcon}
           >
             <IconBrandWhatsapp color="#007039" />
           </ActionIcon>

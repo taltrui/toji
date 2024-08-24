@@ -13,5 +13,7 @@
 
   &:active {
     background-color: var(--mantine-color-green-0);
+    box-shadow: var(--mantine-shadow-xs);
+    transform: translateY(calc(0.0625rem * var(--mantine-scale)))
   }
 }
