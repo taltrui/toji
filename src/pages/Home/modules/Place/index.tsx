@@ -10,10 +10,16 @@ const Place = () => {
         src={Rings}
         alt="Quinta La Paz"
         style={{
-          width: "25%",
+          width: "20%",
         }}
       />
-      <Title order={1}>Ceremonia</Title>
+      <Title
+        style={{
+          fontSize: "2.5em",
+        }}
+      >
+        Ceremonia
+      </Title>
       <Text
         style={{
           textAlign: "center",
@@ -21,9 +27,9 @@ const Place = () => {
         }}
       >
         Te esperamos en <br />
-        <b>Gorostiaga 760, Fatima, Buenos Aires</b>
-        <br /> para festejar juntos nuestra ceremonia <br /> ¡Por favor, se
-        puntual!
+        <b>Gorostiaga 760, Fatima</b>, a las <b>18:30hs</b>
+        <br /> para festejar nuestra ceremonia <br />
+        <b>¡Por favor, se puntual!</b>
       </Text>
       <a href="https://maps.app.goo.gl/QHn4DHRVouxJkZgZA" target="_blank">
         <Button leftSection={<IconMap2 />} variant="light" size="lg">

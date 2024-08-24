@@ -7,6 +7,7 @@ import Gifts from "./modules/Gifts";
 import Header from "./modules/Header";
 import Place from "./modules/Place";
 import Stay from "./modules/Stay";
+import AudioPlayer from "../../components/AudioPlayer";
 
 const Home = () => {
   const params = useParams(["inv"] as const);
@@ -18,6 +19,7 @@ const Home = () => {
           maxWidth: 600,
         }}
       >
+        <AudioPlayer />
         <Header />
         <Place />
         <DressCode />

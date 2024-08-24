@@ -9,15 +9,22 @@ const DressCode = () => {
         src={DressCodeImage}
         alt="Quinta La Paz"
         style={{
-          width: "25%",
+          width: "20%",
           marginBottom: 24,
         }}
       />
-      <Title order={1} mb={6}>
+      <Title
+        style={{
+          fontSize: "2.5em",
+        }}
+        mb={6}
+      >
         Dress Code
       </Title>
       <Text size="lg">Elegante</Text>
-      <Text size="sm">Tip: no uses tacos aguja</Text>
+      <Text size="sm" fs="italic">
+        Tip: no uses tacos aguja
+      </Text>
     </Stack>
   );
 };

@@ -14,16 +14,22 @@ const Gifts = () => {
         marginTop: 24,
       }}
     >
-      <Title>Regalos</Title>
+      <Title
+        style={{
+          fontSize: "2.5em",
+        }}
+      >
+        Regalos
+      </Title>
       <Text
         style={{
           textAlign: "center",
           marginBottom: 12,
-          maxWidth: 400,
+          padding: "0 24px",
         }}
       >
-        ¡Tu presencia es nuestro mejor regalo! <br /> de igual forma, te pasamos
-        nuestros datos por si queres dejarnos un detalle
+        ¡Tu presencia es nuestro mejor regalo! Sin embargo, si deseas dejarnos
+        un detalle, te compartimos nuestros datos.
       </Text>
       <Button size="md" onClick={onOpen}>
         Ver datos

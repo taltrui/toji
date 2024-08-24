@@ -56,7 +56,7 @@ const Confirmation = ({ invitationId }: { invitationId: string }) => {
             }}
           >
             {`Esta invitación vale para ${createInviteesText()}.`}
-            <br /> Por favor, confirma asistencia
+            <br /> Por favor, confirmá asistencia
           </Text>
         )}
         <Button

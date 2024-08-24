@@ -17,13 +17,20 @@ const Stay = () => {
           "linear-gradient(0deg, rgba(7,91,0,0.7) 0%, rgba(15,193,0,0.35) 50%, rgba(15,193,0,0) 100%)",
       }}
     >
-      <Title order={1}>Hospedaje</Title>
+      <Title
+        style={{
+          fontSize: "2.5em",
+        }}
+      >
+        Hospedaje
+      </Title>
       <Text
+        size="sm"
         style={{
           textAlign: "center",
         }}
       >
-        Te dejamos algunas opciones por si queres pasar la noche cerca
+        Para tu comodidad, te ofrecemos algunas opciones de alojamiento cercano
       </Text>
 
       <UnstyledButton

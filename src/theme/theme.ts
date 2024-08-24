@@ -18,7 +18,7 @@ const green: MantineColorsTuple = [
 const theme = createTheme({
   fontFamily: "Inika, serif",
   headings: {
-    fontFamily: "Great Vibes, cursive",
+    fontFamily: "Rouge Script, cursive",
     fontWeight: "400",
   },
   primaryColor: "green",

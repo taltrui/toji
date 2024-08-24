@@ -49,7 +49,7 @@ const Header = () => {
           <Title
             variant="h1"
             style={{
-              fontSize: "3.5em",
+              fontSize: "4em",
               textWrap: "nowrap",
               color: "white",
             }}
@@ -59,7 +59,7 @@ const Header = () => {
           <Text
             style={{
               color: "white",
-              fontSize: "1.8em",
+              fontSize: "1.5em",
             }}
           >
             ¡Nos casamos!
@@ -81,11 +81,11 @@ const Header = () => {
               marginBottom: 8,
             }}
           >
-            Agenda la fecha
+            Agendá la fecha
           </Text>
           <Title
             style={{
-              fontSize: "2.5em",
+              fontSize: "3em",
             }}
           >
             7 de Diciembre
