@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 
 import MainSong from "../../assets/mainsong.mp3";
 import { ActionIcon, Affix, Box, useMantineTheme } from "@mantine/core";
-import { IconMusic, IconPlayerPause, IconPlayerPlay } from "@tabler/icons-react";
+import { IconMusic, IconPlayerPause } from "@tabler/icons-react";
 import ReactAudioSpectrum from "react-audio-spectrum";
 
 import styles from "./styles.module.scss";
