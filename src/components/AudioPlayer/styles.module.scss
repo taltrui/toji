@@ -15,14 +15,16 @@
 }
 
 .pause {
-    height: 100px;
+    height: calc(54px * 2);
     width: 54px;
     transition: border-radius 0.2s ease-out, height 0.30s ease-out;
 }
 
 .waveformContainer {
-    height: 30px;
-    width: 30px;
+    height: 54px;
+    width: 54px;
     display: flex;
-    margin-left: 3px;
+    justify-content: center;
+    padding-left: 3px;
+    align-items: center;
 }

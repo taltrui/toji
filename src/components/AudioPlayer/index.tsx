@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import MainSong from "../../assets/mainsong.mp3";
 import { ActionIcon, Affix, Box, useMantineTheme } from "@mantine/core";
@@ -11,7 +11,25 @@ const AudioPlayer = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const theme = useMantineTheme();
-  theme.colors.green[1]
+
+  useEffect(() => {
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        audioRef.current?.load();
+        setIsPlaying(false);
+      }
+    }
+
+    document.addEventListener("visibilitychange", handleVisibilityChange)
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
+
+
+
   const togglePlay = () => {
     if (isPlaying) {
 
@@ -27,17 +45,15 @@ const AudioPlayer = () => {
       <Box className={`${styles.playerContainer} ${isPlaying ? styles.pause : styles.play}`}>
         <audio ref={audioRef} src={MainSong} id="main-song-player" onEnded={() => setIsPlaying(false)} />
         <ActionIcon onClick={togglePlay} style={{
-          height: 30,
-          width: 30,
+          minHeight: 54,
+          width: 54,
           backgroundColor: 'transparent',
-          marginBottom: 54 / 4,
-          marginTop: 54 / 4,
         }}>{isPlaying ? <IconPlayerPause color={theme.colors.green[9]} /> : <IconMusic color={theme.colors.green[9]} />}</ActionIcon>
 
         <Box className={styles.waveformContainer}>
           <ReactAudioSpectrum
             id="audio-canvas"
-            height={30}
+            height={35}
             width={30}
             audioId="main-song-player"
             capColor={'red'}
