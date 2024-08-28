@@ -65,7 +65,7 @@ const FieldGroup = ({ index, type }: { index: number; type: string }) => (
             {...field}
             {...meta}
             label="Detalles"
-            placeholder="Detalles"
+            placeholder="Comentarios adicionales"
             mt={16}
           />
         )

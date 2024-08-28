@@ -9,4 +9,23 @@
 .formContainer {
   display: flex;
   justify-content: center;
+  height: 100%;
+}
+
+.drawerContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+.drawerBody {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.drawerRoot {
+  display: flex;
+  flex: 1;
 }
