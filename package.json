@@ -23,6 +23,7 @@
     "react": "^18.2.0",
     "react-audio-spectrum": "^0.1.5",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.26.1",
     "yup": "^1.4.0"
   },
   "devDependencies": {

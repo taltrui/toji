@@ -15,7 +15,6 @@ export const getInitialValues = (
   const adults = invitees.filter((invitee) => !invitee.minor);
   const minors = invitees.filter((invitee) => invitee.minor);
 
-  console.log(adults)
   adults.forEach((invitee) => {
     initialValues.adults.push({
       wont_assist: invitee.wont_assist,

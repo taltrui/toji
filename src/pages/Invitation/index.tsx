@@ -13,7 +13,6 @@ import { useEffect } from "react";
 const Invitation = () => {
   const params = useParams(["inv"] as const);
 
-  console.log(params)
   useEffect(() => {
     if (params.inv) {
       localStorage.setItem('invitationId', params.inv);
