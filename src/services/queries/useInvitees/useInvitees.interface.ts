@@ -5,6 +5,7 @@ export enum DietaryRestriction {
 }
 
 export interface Invitee {
+  wont_assist: boolean;
   id?: string;
   name: string;
   surname: string;

@@ -8,22 +8,36 @@ const FieldGroup = ({ index, type }: { index: number; type: string }) => (
     mb={24}
     legend={`${type === "minors" ? "Menor" : "Adulto"} ${index + 1}`}
   >
-    <Field name={`${type}.${index}.name`}>
+    <Field name={`${type}.${index}.wont_assist`}>
       {({ field, meta }: FieldProps) => (
+        <Checkbox
+          {...field}
+          {...meta}
+          checked={field.value}
+          size="md"
+          label="No asistirá"
+        />
+      )}
+    </Field>
+    <Field name={`${type}.${index}.name`}>
+      {({ field, meta, form }: FieldProps) => (
         <TextInput
           {...field}
           {...meta}
+          disabled={form.values[type][index]["wont_assist"]}
           label="Nombre"
           placeholder="Nombre"
           size="md"
+          mt={16}
         />
       )}
     </Field>
     <Field name={`${type}.${index}.surname`}>
-      {({ field, meta }: FieldProps) => (
+      {({ field, meta, form }: FieldProps) => (
         <TextInput
           {...field}
           {...meta}
+          disabled={form.values[type][index]["wont_assist"]}
           size="md"
           label="Apellido"
           placeholder="Apellido"
@@ -44,15 +58,18 @@ const FieldGroup = ({ index, type }: { index: number; type: string }) => (
           <Group mt={4}>
             <Checkbox
               value={DietaryRestriction.CELIAC}
+              disabled={form.values[type][index]["wont_assist"]}
               size="md"
               label="Celíaco/a"
             />
             <Checkbox
               size="md"
               value={DietaryRestriction.VEGETARIAN}
+              disabled={form.values[type][index]["wont_assist"]}
               label="Vegetariano/a"
             />
-            <Checkbox size="md" value={DietaryRestriction.OTHER} label="Otro" />
+            <Checkbox size="md" value={DietaryRestriction.OTHER} label="Otro" disabled={form.values[type][index]["wont_assist"]}
+            />
           </Group>
         </Checkbox.Group>
       )}
@@ -64,6 +81,7 @@ const FieldGroup = ({ index, type }: { index: number; type: string }) => (
             size="md"
             {...field}
             {...meta}
+            disabled={form.values[type][index]["wont_assist"]}
             label="Detalles"
             placeholder="Comentarios adicionales"
             mt={16}
