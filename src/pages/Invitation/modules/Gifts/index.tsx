@@ -29,7 +29,7 @@ const Gifts = () => {
         }}
       >
         ¡Tu presencia es nuestro mejor regalo! Sin embargo, si deseas dejarnos
-        un detalle, te compartimos nuestros datos.
+        un detalle, te compartimos nuestros datos
       </Text>
       <Button size="md" onClick={onOpen}>
         Ver datos
