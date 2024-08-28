@@ -4,7 +4,10 @@ import { Invitation } from "../useInvitation/useInvitation.interface";
 const fetchInvitations = async (): Promise<Invitation[]> => {
   let { data, error } = await supabase
     .from('invitations')
-    .select('*')
+    .select(`
+      *,
+      invitees (*)
+    `)
 
   if (error) {
     throw new Error(error.message);

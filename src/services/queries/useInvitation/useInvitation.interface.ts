@@ -1,3 +1,5 @@
+import { Invitee } from "../useInvitees/useInvitees.interface";
+
 export interface Invitation {
     id: string;
     created_at: string;
@@ -5,4 +7,5 @@ export interface Invitation {
     adults: number;
     minors: number;
     closed: boolean;
+    invitees?: Invitee[];
 }
