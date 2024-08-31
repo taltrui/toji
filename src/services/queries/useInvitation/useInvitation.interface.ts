@@ -8,4 +8,12 @@ export interface Invitation {
     minors: number;
     closed: boolean;
     invitees?: Invitee[];
+    assigned_to: string;
+}
+
+export interface InvitationUpdate {
+    adults?: number;
+    minors?: number;
+    closed?: boolean;
+    assigned_to?: string;
 }
