@@ -1,4 +1,4 @@
-import { ActionIcon, Box, Checkbox, CopyButton, Dialog, Table, Text, Tooltip, useMantineTheme } from "@mantine/core";
+import { ActionIcon, Box, Checkbox, CopyButton, Table, Text, Tooltip, useMantineTheme } from "@mantine/core";
 import useInvitations from "../../../../services/queries/useInvitations";
 import { IconCheck, IconCopy, IconUserPlus } from "@tabler/icons-react";
 import { Invitation } from "../../../../services/queries/useInvitation/useInvitation.interface";
